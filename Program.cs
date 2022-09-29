@@ -1,15 +1,22 @@
-namespace WeatherService_GB
+using Weather_GB.Models;
+
+namespace Weather_GB
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            //starting homework
+
             var builder = WebApplication.CreateBuilder(args);
+
 
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Services.AddSingleton<WeatherHolder>();
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
