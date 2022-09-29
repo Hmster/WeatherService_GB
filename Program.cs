@@ -4,6 +4,7 @@ namespace WeatherService_GB
     {
         public static void Main(string[] args)
         {
+            //starting homework
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
